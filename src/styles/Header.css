@@ -1,0 +1,27 @@
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px;
+}
+.title{
+    font-size: 40px;
+    font-family: cursive;
+    color: palevioletred;
+    font-weight: bolder;
+}
+
+.switch-theme{
+    background-color: palevioletred;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}

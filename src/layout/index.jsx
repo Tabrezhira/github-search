@@ -8,7 +8,6 @@ function Layout({children}) {
     <main>
         {children}
     </main>
-    <footer>App by Tabrez Hakimji </footer>
   </React.Fragment>
   )
 }

@@ -2,3 +2,14 @@ html, body {
   padding: 0px;
   margin: 0px;
 }
+.light-mode{
+  background:whitesmoke;
+  color: black;
+  width: 100%;
+}
+
+.dark-mode{
+  background-color: rgb(13, 11, 12);
+  color: whitesmoke;
+  width: 100%;
+}
