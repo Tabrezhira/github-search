@@ -16,7 +16,12 @@ const UserProvider = ({children}) =>{
         try {
             const res = await fetch(`${BASE_URL}/${userId}`)
             const data = await res.json();
-            setUser(data)
+            if(data.login){
+                setUser(data)
+            }else{
+                setUser(null)
+            }
+
         } catch (error) {
             console.log(error)
             setUser(null)
