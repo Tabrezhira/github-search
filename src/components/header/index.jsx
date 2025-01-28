@@ -1,11 +1,14 @@
 import React from 'react'
 import "../../styles/Header.css"
-import {useTheme} from'../../context/index'
+import { useDispatch, useSelector } from 'react-redux'
+import {themeActions} from '../../store/theme-slice'
+
 
 function Header() {
-  const theme = useTheme()
+  const themeState = useSelector((state)=> state.theme)
+  const dispatch = useDispatch()
   const handleThemChange = () => {
-    theme.toggleTheme()
+    dispatch(themeActions.toggleTheme())
   }
   return (
     <section className='header-container'>

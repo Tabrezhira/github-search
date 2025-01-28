@@ -5,15 +5,16 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import ThemeProvider from './context/ThemeProvider.jsx'
 import UserProvider from './context/UserProvider.jsx'
+import { Provider } from 'react-redux'
+import store from './store/index.js'
 
+document.body.className='light-mode' 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-    <ThemeProvider>
-      <UserProvider>
-       <App />
-      </UserProvider>
-    </ThemeProvider>
-    </BrowserRouter>
+    <Provider store = {store}>
+      <BrowserRouter>
+               <App />
+      </BrowserRouter>
+    </Provider>
   </StrictMode>,
 )

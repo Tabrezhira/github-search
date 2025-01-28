@@ -1,11 +1,13 @@
 import React from 'react'
-import { useGithobUser } from '../context'
 import '../styles/User.css'
 import UserProfile from '../components/user-profile/UserProfile'
+
+
 import Notfound from '../components/notfound/Notfound'
+import { useSelector } from 'react-redux'
  
 function User() {
-  const {user} = useGithobUser()
+  const user = useSelector((state) => state.githubUser.user)
   console.log(user)
   return (
     <section className='container'>
